@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'webpacker', '~> 3.5'
 gem 'devise'
+gem "sentry-raven"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
