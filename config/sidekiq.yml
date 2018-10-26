@@ -1,0 +1,6 @@
+---
+:concurrency: 5
+:queues:
+  - default
+  - high_priority
+  - mailers

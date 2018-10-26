@@ -1,3 +1,6 @@
+require 'sidekiq/web'
+require 'sidetiq/web'
+
 Rails.application.routes.draw do
   
   devise_for :users,
@@ -11,6 +14,12 @@ Rails.application.routes.draw do
       :registrations => "users/registrations",
       :confirmations => "users/confirmations",
     }
+
+  # Sidekiq
+  Sidekiq::Web.use Rack::Auth::Basic do |username, password|
+  username == "admin" && password == "rh_jobs"
+  end if Rails.env.production? || Rails.env.staging?
+  mount Sidekiq::Web, at: "/sidekiq"
 
   root to: 'pages#home'
 
