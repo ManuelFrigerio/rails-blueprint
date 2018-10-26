@@ -23,8 +23,8 @@ Libraries included in this rails app:
 2. Go to the folder `cd rails-blueprint` and run `gem install bundle && bundle install`
 3. Run `rails db:setup && rails db:migrate` to create db and included Users table
 4. To rename the app run `rails g rename:into New-Name`
-5. If you are on Heroku, generate a master key by runing this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure <your-master-key> is an alphanumeric string 32 chars.
-6. Go to devise.rb:21 and change the default email address
+5. If you are on Heroku, generate a master key by runing this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure `your-master-key` is an alphanumeric string 32 chars.
+6. Go to devise.rb and change the default email address `config.mailer_sender`
   
 ## Screenshots
 
