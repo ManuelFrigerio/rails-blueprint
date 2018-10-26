@@ -11,6 +11,8 @@ module Referralhero
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
+    config.autoload_paths << Rails.root.join('lib') # adds Lib folder to autoloaded files
+
     # allow cross origin requests. Comment it out if you're not interested in cross-origin requests
     config.middleware.insert_before 0, Rack::Cors do
       allow do
