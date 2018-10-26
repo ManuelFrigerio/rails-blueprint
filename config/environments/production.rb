@@ -87,6 +87,21 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
+  config.action_mailer.default_url_options = { :host => 'https://mywebsite.com' }
+  config.action_mailer.delivery_method = :sparkpost
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = {
+    port: ENV['SPARKPOST_SMTP_PORT'],
+    address: ENV['SPARKPOST_SMTP_HOST'],
+    user_name: ENV['SPARKPOST_SMTP_USERNAME'],
+    password: ENV['SPARKPOST_SMTP_PASSWORD'],
+    authentication: :login,
+    enable_starttls_auto: true
+  }
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
