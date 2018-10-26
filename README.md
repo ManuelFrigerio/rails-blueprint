@@ -17,7 +17,7 @@ Libraries included in this rails app:
 
 ## Installation
 1. Clone the repo `git clone git@github.com:ManuelFrigerio/rails-blueprint.git`
-2. Run `gem install bundle && bundle install`
+2. Go to the folder `cd rails-blueprint` and run `gem install bundle && bundle install`
 3. Run `rails db:setup && rails db:migrate` to create db and included Users table
 4. To rename the app run `rails g rename:into New-Name`
 5. If you are on Heroku, generate a master key by runing this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure <your-master-key> is an alphanumeric string 32 chars.
