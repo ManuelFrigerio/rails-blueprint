@@ -21,5 +21,11 @@ module Referralhero
       end
     end
 
+    # disable superfluous generator extras
+    config.generators do |g|
+      g.assets = false # remove auto stylesheets
+      g.helper = true
+    end
+
   end
 end
