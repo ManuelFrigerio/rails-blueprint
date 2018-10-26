@@ -14,3 +14,22 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+var notification = function(color, msg) {
+  var notification = document.createElement("div");
+  notification.classList = "notification animated fadeInDown "+color;
+  notification.innerText = msg;
+  document.getElementsByTagName('body')[0].appendChild(notification);
+  setTimeout(function() {
+    notification.classList.remove("fadeInDown");
+    notification.classList.add("fadeOutUp");
+  }, 3500);
+};
+
+var showError = function(msg) {
+  notification('is-danger', msg);
+};
+
+var showNotice = function(msg) {
+  notification('is-success', msg);
+};

@@ -1,0 +1,19 @@
+.notification {
+  z-index: 99999999999999999999;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  text-align: center;
+}
+
+/*On tablet and desktops*/
+@media only screen and (min-width: 768px) {
+
+  .notification {
+    right: 25px;
+    left: 25px;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+}
