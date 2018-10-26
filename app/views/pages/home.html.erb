@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<section class="hero is-primary is-medium is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Welcome!
+      </h1>
+      <h2 class="subtitle">
+        This is a <a href="https://github.com/ManuelFrigerio/rails-blueprint" target="_blank" class="has-text-grey-dark">Rails 5 app boilerplate</a> by <a href="https://manuel.friger.io" target="_blank" class="has-text-grey-dark ">Manuel Frigerio</a>
+      </h2>
+      <%= link_to "Signup", new_user_registration_path, class: "button is-primary is-rounded is-inverted is-outlined" %>
+      <%= link_to "Login", new_user_session_path, class: "button is-primary is-rounded is-inverted is-outlined" %>
+    </div>
+  </div>
+</section>
+
+<% if user_signed_in? %>
+<section class="section">
+    <div class="container">
+      <p><%= link_to "Log out".html_safe, destroy_user_session_path, method: :delete, class: "has-text-danger" %></p>
+    </div>
+  </section>
+<% end %>
