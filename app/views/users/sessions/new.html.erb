@@ -1,26 +1,31 @@
-<h2>Log in</h2>
+<section class="hero has-background-white-ter is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <figure class="image is-inline-block is-96x96">
+          <img src="https://bulma.io/images/placeholders/96x96.png" class="is-rounded">
+        </figure>
+        <p class="subtitle has-text-grey">Login</p>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+        <div class="box">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+              <div class="control">
+                <%= f.email_field :email, placeholder: "Your email", class: "input is-medium" %>
+              </div>
+            </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+            <div class="field">
+              <div class="control">
+                <%= f.password_field :password, placeholder: "Your password", class: "input is-medium" %>
+              </div>
+            </div>
+            <%= f.submit "Log in", class: "button is-uppercase is-block is-info is-large is-fullwidth" %>
+          <% end %>
+        </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      </div>
+      <%= render "users/shared/links" %>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</section>

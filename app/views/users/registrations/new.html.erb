@@ -1,29 +1,42 @@
-<h2>Sign up</h2>
+<section class="hero has-background-white-ter is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <figure class="image is-inline-block is-96x96">
+          <img src="https://bulma.io/images/placeholders/96x96.png" class="is-rounded">
+        </figure>
+        <p class="subtitle has-text-grey">Create your account</p>
+        <div class="box">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <div class="field">
+              <div class="control">
+                <%= f.text_field :first_name, placeholder: "First name", class: "input is-medium" %>
+              </div>
+            </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+            <div class="field">
+              <div class="control">
+                <%= f.text_field :last_name, placeholder: "Last name", class: "input is-medium" %>
+              </div>
+            </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <div class="field">
+              <div class="control">
+                <%= f.email_field :email, placeholder: "Your email", class: "input is-medium" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <%= f.password_field :password, placeholder: "Your password", class: "input is-medium" %>
+              </div>
+            </div>
+            <%= f.submit "Sign up", class: "button is-uppercase is-block is-info is-large is-fullwidth" %>
+          <% end %>
+        </div>
+
+      </div>
+      <%= render "users/shared/links" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</section>
