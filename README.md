@@ -26,4 +26,5 @@ Libraries included in this rails app:
 ## Screenshots
 
 Flash messages
+
 ![flash](http://g.recordit.co/a10vtjKgBA.gif)
