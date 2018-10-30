@@ -1,6 +1,9 @@
 # README
 
 ## Overview
+
+![logo](https://quicknote-images.s3.amazonaws.com/images/1540900611411-%20Untitled%2520design.png)
+
 Rails Blueprint is a boilerplate to create Rails 5 apps easily and quickly.
 This boilerplate was born from an internal document that you can find [here](https://www.notion.so/maitre/Rails-5-App-Setup-Blueprint-d8b70c50d62f4bf5a4607ee7a7b994ac).
 
