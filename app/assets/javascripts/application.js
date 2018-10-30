@@ -18,7 +18,7 @@
 var notification = function(color, msg) {
   var notification = document.createElement("div");
   notification.classList = "notification animated fadeInDown "+color;
-  notification.innerText = msg;
+  notification.innerHTML = msg;
   document.getElementsByTagName('body')[0].appendChild(notification);
   setTimeout(function() {
     notification.classList.remove("fadeInDown");
