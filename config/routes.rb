@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   # Sidekiq
   Sidekiq::Web.use Rack::Auth::Basic do |username, password|
-  username == "admin" && password == "rh_jobs"
+  username == "admin" && password == "password"
   end if Rails.env.production? || Rails.env.staging?
   mount Sidekiq::Web, at: "/sidekiq"
 
