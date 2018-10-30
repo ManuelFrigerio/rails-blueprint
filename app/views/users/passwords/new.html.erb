@@ -1,7 +1,8 @@
 <h2>Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+  
+  <%= render "layouts/scripts/form_errors", obj: resource %>
 
   <div class="field">
     <%= f.label :email %><br />

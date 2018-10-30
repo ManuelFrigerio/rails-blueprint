@@ -10,6 +10,9 @@
         <p class="subtitle has-text-grey">Create your account</p>
         <div class="box">
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+            <%= render "layouts/scripts/form_errors", obj: resource %>
+
             <div class="field">
               <div class="control">
                 <%= f.text_field :first_name, placeholder: "First name", class: "input is-medium" %>

@@ -11,6 +11,9 @@
 
         <div class="box">
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+            <%= render "layouts/scripts/form_errors", obj: resource %>
+
             <div class="field">
               <div class="control">
                 <%= f.email_field :email, placeholder: "Your email", class: "input is-medium" %>
