@@ -1,4 +1,4 @@
-opts = { url: ENV['REDISCLOUD_URL'], namespace: 'referralhero-sidekiq' }
+opts = { url: ENV['REDISCLOUD_URL'], namespace: 'myapp-sidekiq' }
 
 Sidekiq.configure_client do |config|
   config.redis = opts
