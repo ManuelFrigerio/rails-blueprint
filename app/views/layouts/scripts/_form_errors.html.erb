@@ -1,0 +1,5 @@
+<% if obj.errors.any? %>
+  <script type="text/javascript">
+    showError("<%= j render(:partial => 'layouts/scripts/validation', :locals => {:obj => obj}) %>")
+  </script>
+<% end %>
