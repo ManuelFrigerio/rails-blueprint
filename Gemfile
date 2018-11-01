@@ -5,6 +5,7 @@ ruby '2.5.0'
 
 # FOUNDATION
 gem 'rails', '~> 5.2.1'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'coffee-rails', '~> 4.2'
 
