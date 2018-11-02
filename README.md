@@ -27,7 +27,7 @@ Libraries included in this rails app:
 * Troubleshoot problems faster with [Better Errors](https://github.com/BetterErrors/better_errors)
 * Production-ready DB setup via postgres
 * Google Analytics with Turbolinks support
-* [LetterOpener](https://github.com/ryanb/letter_opener)
+* Preview emails in your browser (instead if sending them) with [LetterOpener](https://github.com/ryanb/letter_opener)
 * [DotEnv](https://github.com/bkeepers/dotenv) for environment variables support
 
 ## Installation
@@ -40,7 +40,7 @@ Libraries included in this rails app:
 * If you are on Heroku, generate a master key by runing this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure `your-master-key` is an alphanumeric string 32 chars.
 * Go to **devise.rb** and change the default email address `config.mailer_sender`
 * Go to **config/initializers/metatags.rb** to customize the metatags for your app.
-* Create .env file and set your environment variables
+* Create `.env` file and set your environment variables on your machine (see `.env-example`)
   
 ## Screenshots
 
