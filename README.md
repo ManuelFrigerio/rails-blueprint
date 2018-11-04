@@ -19,7 +19,7 @@ Ideas/feedback/suggestions are welcome. Please open a PR to suggest a new featur
 ## Libraries
 Libraries included in this rails app:
 * User authentication via [Devise](https://github.com/plataformatec/devise)
-* Login/Sign up pages already designed and easyly customizable
+* Login/Sign up pages already designed and easily customizable
 * Script that handles flash messages
 * Easy CSS animations with [Animated.css](https://daneden.github.io/animate.css/)
 * Design via [Bulma](https://bulma.io/) + Sass
@@ -27,7 +27,7 @@ Libraries included in this rails app:
 * Troubleshoot problems faster with [Better Errors](https://github.com/BetterErrors/better_errors)
 * Production-ready DB setup via postgres
 * Google Analytics with Turbolinks support
-* Preview emails in your browser (instead if sending them) with [LetterOpener](https://github.com/ryanb/letter_opener)
+* Preview emails in your browser (instead of sending them) with [LetterOpener](https://github.com/ryanb/letter_opener)
 * [DotEnv](https://github.com/bkeepers/dotenv) for environment variables support
 
 ## Installation
