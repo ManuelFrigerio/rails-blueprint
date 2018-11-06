@@ -36,6 +36,11 @@ Libraries included in this rails app:
 3. Run `rails db:setup && rails db:migrate` to create db and included Users table
 4. To rename the app run `rails g rename:into New-Name`
 
+## Sending emails
+To send emails Blueprint uses [SparkPost](https://sparkpost.com), an extremely realiable, developer-friendly and cheap ($9/month for 50K emails) email service. After you signup/login, get your API key here: https://app.sparkpost.com/account/api-keys.
+
+Simply make sure to set the `SPARKPOST_API_KEY` variable in your environment with your Sparkpost API key. You can also override other settings by changing the initializer (**config/initializers/sparkpost_rails.rb**) as [explained here](https://github.com/the-refinery/sparkpost_rails).
+
 ## Other options
 * If you are on Heroku, generate a master key by runing this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure `your-master-key` is an alphanumeric string 32 chars.
 * Go to **devise.rb** and change the default email address `config.mailer_sender`
