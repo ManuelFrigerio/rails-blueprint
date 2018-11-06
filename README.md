@@ -41,7 +41,20 @@ Libraries included in this rails app:
 * Go to **devise.rb** and change the default email address `config.mailer_sender`
 * Go to **config/initializers/metatags.rb** to customize the metatags for your app.
 * Create `.env` file and set your environment variables on your machine (see `.env-example`)
-  
+
+## Roadmap
+* Add logic to handle subscriptions using Stripe's webhooks
+* Basic admin dashboard which also allows to [sign in as another user](https://github.com/plataformatec/devise/wiki/How-To:-Sign-in-as-another-user-if-you-are-an-admin)
+* Add basic Pricing page
+* Add [friendly_id gem](https://github.com/norman/friendly_id)
+* Add [Chartkick](https://chartkick.com/) and [groupdate](https://github.com/ankane/groupdate) gems for charts
+* Add [SitemapGenerator](https://github.com/kjvarga/sitemap_generator) to... automatically generate a sitemap. 
+
+## Contributions
+
+Feel free to implement anything from the roadmap, submit pull requests, create issues, discuss ideas or spread the word.
+When adding a gem, make sure to add clear instructions in the **Installation** section on how to use it.
+
 ## Screenshots
 
 Flash messages
@@ -51,7 +64,3 @@ Flash messages
 Signup screen
 
 ![signup](https://quicknote-images.s3.amazonaws.com/images/1540900091320-%20ReferralHero%2520%2520%2520Results%2520driven%2520referral%2520software%2520for%2520SaaS%2520companies%2520.png)
-
-## Contributions
-
-Feel free to submit pull requests, create issues, discuss ideas or spread the word.
