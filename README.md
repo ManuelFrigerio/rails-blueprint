@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://quicknote-images.s3.amazonaws.com/images/1540900611411-%20Untitled%2520design.png" height="150">
-  <h2 align="center">Rails Blueprint</h2>
-  <p align="center">Boilerplate to create Rails 5 apps in seconds.<p>
+  <h2 align="center">Blueprint</h2>
+  <p align="center">A boilerplate to create Rails 5 apps in seconds.<p>
   <p align="center">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="prs welcome">
@@ -11,7 +11,7 @@
 
 ## Overview
 
-Rails Blueprint is a boilerplate to create Rails 5 apps easily and quickly.
+Blueprint is a boilerplate to create Rails 5 apps easily and quickly.
 This boilerplate was born from an internal document that you can find [here](https://www.notion.so/maitre/Rails-5-App-Setup-Blueprint-d8b70c50d62f4bf5a4607ee7a7b994ac).
 
 Ideas/feedback/suggestions are welcome. Please open a PR to suggest a new feature.
