@@ -1,5 +1,5 @@
 SparkPostRails.configure do |c|
-  c.api_key = ENV['SPARKPOST_API']
+  c.api_key = ENV['SPARKPOST_API_KEY']
   c.sandbox = false                               # default: false
   c.track_opens = true                            # default: false
   c.track_clicks = true                           # default: false
