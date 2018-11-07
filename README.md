@@ -46,6 +46,7 @@ Simply make sure to set the `SPARKPOST_API_KEY` variable in your environment wit
 * Go to **devise.rb** and change the default email address `config.mailer_sender`
 * Go to **config/initializers/metatags.rb** to customize the metatags for your app.
 * Create `.env` file and set your environment variables on your machine (see `.env-example`)
+* Blueprint is already customized to show errors using Bulma. If you decide not to use Bulma, you can still customize the error class that is added to inputs when validation fails by customizing line 4 of the **customize_errors.rb** initializer.
 
 ## Roadmap
 * Add logic to handle subscriptions using Stripe's webhooks
