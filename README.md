@@ -41,12 +41,61 @@ To send emails Blueprint uses [SparkPost](https://sparkpost.com), an extremely r
 
 Simply make sure to set the `SPARKPOST_API_KEY` variable in your environment with your Sparkpost API key. You can also override other settings by changing the initializer (**config/initializers/sparkpost_rails.rb**) as [explained here](https://github.com/the-refinery/sparkpost_rails).
 
+## Flash messages
+Blueprint ships with a built-in JavaScript utility to handle flash messages.
+Flash messages will appear as flash notifications at the top of the screen for 3,5 seconds.
+
+![flash message](http://g.recordit.co/EUkOJ7Vhun.gif)
+
+You can use 4 different type of flash messages: `:notice`, `:success`, `:error` and `:warning`.
+Each flash type comes with a different colour.
+
+![flash messages colour](https://quicknote-images.s3.amazonaws.com/images/1541593180193-%20Untitled%2520design.png)
+
+### Trigger flash messages manually
+You can manually trigger flash messages everywhere in your app with the following code:
+```
+showNotice("This is a notice notification");
+showSuccess("This is a success notification");
+showError("This is a error notification");
+showWarning("This is a warning notification");
+```
+### Flash notification position
+You can change the default position by adding a second parameter "bottom" to the function, like this:
+```
+showNotice("This is a notice notification", "bottom");
+```
+
+You can change the position of all flash messages in your app to bottom by editing the file **layouts/scripts/flash**, eg:
+```
+<% if flash[:success] %>
+  showSuccess("<%= flash[:success] %>", "bottom");
+<% end %>
+```
+
+## Form validation
+Form validations are also handled automatically.
+If any validations fail, the respective inputs will turn red as shown in the screenshot below.
+
+![validation](https://quicknote-images.s3.amazonaws.com/images/1541591390886-%20campaign.png)
+
+This is done with the help of an initializer that overrides Rails's default behaviour and add a `.is-danger` class to the inputs that fail the validation. If you decide not to use Bulma, you can still customize the error class by changing line 4 of the **customize_errors.rb** initializer.
+
+You can also use flash messages to show validation errors. Blueprint has got a handy helper that you simply paste inside a form:
+
+```
+<%= form_for @object %>
+  <%= render "layouts/scripts/form_errors", obj: @object %>
+<% end %>
+```
+
+![form flash messages](https://quicknote-images.s3.amazonaws.com/images/1541594989782-%20valid.png)
+
 ## Other options
 * If you are on Heroku, generate a master key by runing this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure `your-master-key` is an alphanumeric string 32 chars.
 * Go to **devise.rb** and change the default email address `config.mailer_sender`
 * Go to **config/initializers/metatags.rb** to customize the metatags for your app.
 * Create `.env` file and set your environment variables on your machine (see `.env-example`)
-* Blueprint is already customized to show errors using Bulma. If you decide not to use Bulma, you can still customize the error class that is added to inputs when validation fails by customizing line 4 of the **customize_errors.rb** initializer.
 
 ## Roadmap
 * Add logic to handle subscriptions using Stripe's webhooks
