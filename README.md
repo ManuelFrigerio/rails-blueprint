@@ -10,7 +10,6 @@
 
 
 ## Overview
-
 Blueprint is a boilerplate to create Rails 5 apps easily and quickly.
 This boilerplate was born from an internal document that you can find [here](https://www.notion.so/maitre/Rails-5-App-Setup-Blueprint-d8b70c50d62f4bf5a4607ee7a7b994ac).
 
@@ -43,11 +42,17 @@ Simply make sure to set the `SPARKPOST_API_KEY` variable in your environment wit
 
 ## Flash messages
 Blueprint ships with a built-in JavaScript utility to handle flash messages.
-Flash messages will appear as flash notifications at the top of the screen for 3,5 seconds.
+Flash messages will appear as notifications at the top of the screen for 3,5 seconds.
 
 ![flash message](http://g.recordit.co/EUkOJ7Vhun.gif)
 
-You can use 4 different type of flash messages: `:notice`, `:success`, `:error` and `:warning`.
+You can use 4 different type of flash messages:
+```
+flash[:notice] = "This is a notice notification"
+flash[:error] = "This is a error notification"
+flash[:success] = "This is a success notification"
+flash[:warning] = "This is a warning notification"
+```
 Each flash type comes with a different colour.
 
 ![flash messages colour](https://quicknote-images.s3.amazonaws.com/images/1541593180193-%20Untitled%2520design.png)
@@ -81,7 +86,8 @@ If any validations fail, the respective inputs will turn red as shown in the scr
 
 This is done with the help of an initializer that overrides Rails's default behaviour and add a `.is-danger` class to the inputs that fail the validation. If you decide not to use Bulma, you can still customize the error class by changing line 4 of the **customize_errors.rb** initializer.
 
-You can also use flash messages to show validation errors. Blueprint has got a handy helper that you simply paste inside a form:
+You can also use flash messages to show validation errors.
+Blueprint has got a handy helper that you simply paste inside a form:
 
 ```
 <%= form_for @object %>
@@ -92,7 +98,7 @@ You can also use flash messages to show validation errors. Blueprint has got a h
 ![form flash messages](https://quicknote-images.s3.amazonaws.com/images/1541594989782-%20valid.png)
 
 ## Other options
-* If you are on Heroku, generate a master key by runing this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure `your-master-key` is an alphanumeric string 32 chars.
+* If you are on Heroku, generate a master key by running this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure `your-master-key` is an alphanumeric string 32 chars.
 * Go to **devise.rb** and change the default email address `config.mailer_sender`
 * Go to **config/initializers/metatags.rb** to customize the metatags for your app.
 * Create `.env` file and set your environment variables on your machine (see `.env-example`)
