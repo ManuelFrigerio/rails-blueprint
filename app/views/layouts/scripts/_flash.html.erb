@@ -1,8 +1,14 @@
 <script type="text/javascript">
 <% if flash[:success] %>
-  showNotice("<%= flash[:success] %>");
+  showSuccess("<%= flash[:success] %>");
 <% end %>
-<% if flash[:alert] %>
-  showError("<%= flash[:alert] %>");
+<% if flash[:notice] %>
+  showNotice("<%= flash[:notice] %>");
+<% end %>
+<% if flash[:warning] %>
+  showWarning("<%= flash[:warning] %>");
+<% end %>
+<% if flash[:error] %>
+  showError("<%= flash[:error] %>");
 <% end %>
 </script>
