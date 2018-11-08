@@ -107,6 +107,7 @@ Blueprint has got a handy helper that you simply paste inside a form:
 * Add logic to handle subscriptions using Stripe's webhooks
 * Basic admin dashboard which also allows to [sign in as another user](https://github.com/plataformatec/devise/wiki/How-To:-Sign-in-as-another-user-if-you-are-an-admin)
 * Add basic Pricing page
+* Create a command line based script to customize the installation (add/remove gems, create tables, etc)
 * Add [friendly_id gem](https://github.com/norman/friendly_id)
 * Add [Chartkick](https://chartkick.com/) and [groupdate](https://github.com/ankane/groupdate) gems for charts
 * Add [SitemapGenerator](https://github.com/kjvarga/sitemap_generator) to... automatically generate a sitemap. 
