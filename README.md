@@ -35,10 +35,27 @@ Libraries included in this rails app:
 3. Run `rails db:setup && rails db:migrate` to create db and included Users table
 4. To rename the app run `rails g rename:into New-Name`
 
+## Environment variables
+Blueprint uses a few environment variables to set defaults and save you time.
+You can see which environment variables you need in the `.env-example` file. In your development environment, rename the `.env-example` file to `.env` and restart the server.
+
 ## Sending emails
 To send emails Blueprint uses [SparkPost](https://sparkpost.com), an extremely realiable, developer-friendly and cheap ($9/month for 50K emails) email service. After you signup/login, get your API key here: https://app.sparkpost.com/account/api-keys.
 
 Simply make sure to set the `SPARKPOST_API_KEY` variable in your environment with your Sparkpost API key. You can also override other settings by changing the initializer (**config/initializers/sparkpost_rails.rb**) as [explained here](https://github.com/the-refinery/sparkpost_rails).
+
+### Organised mailers folders
+By default, when you create a new mailer in Rails you have to create a folder under the `views` folder. However, if you have many mailers (eg: UserMailer, OrderMailer, NotificationMailer, etc), this often results in a messy `view` folder.
+
+To solve this problem, Blueprint allows you to create you mailer folders under the new `views/mailers` folder.
+When you create a new mailer (e.g: OrderMailer), simply create the corresponding folder (e.g: order_mailer) under the `views/mailers` folder.
+
+![mailers folder](https://quicknote-images.s3.amazonaws.com/images/1543161663964-%20Screen%2520Shot%25202018-11-25%2520at%252017.00.33.png)
+
+Check out the user_mailer folder as an example.
+
+## Customize Bulma
+You can customize colours, sizes, breakpoints, etc by changing the variables in the `assets/stylesheets/bulma/utilities/initial-variable.scss` and `assets/stylesheets/bulma/utilities/derived-variable.scss` files. You cna learn more about [Bulma's Sass variables here](https://bulma.io/documentation/customize/variables/).
 
 ## Flash messages
 Blueprint ships with a built-in JavaScript utility to handle flash messages.
@@ -100,7 +117,6 @@ Blueprint has got a handy helper that you simply paste inside a form:
 ## Other options
 * If you are on Heroku, generate a master key by running this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure `your-master-key` is an alphanumeric string 32 chars.
 * Go to **devise.rb** and change the default email address `config.mailer_sender`
-* Go to **config/initializers/metatags.rb** to customize the metatags for your app.
 * Create `.env` file and set your environment variables on your machine (see `.env-example`)
 
 ## Roadmap
