@@ -25,7 +25,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmony: true)
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -61,7 +61,15 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
 
   # Use a different cache store in production.
-  config.cache_store = :dalli_store
+  config.cache_store = :mem_cache_store,
+                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                    {:username => ENV["MEMCACHIER_USERNAME"],
+                     :password => ENV["MEMCACHIER_PASSWORD"],
+                     :failover => true,
+                     :socket_timeout => 1.5,
+                     :socket_failure_delay => 0.2,
+                     :down_retry_delay => 60
+                    }
   
   # Use a real queuing backend for Active Job (and separate queues per environment)
   config.active_job.queue_adapter = :sidekiq
@@ -93,14 +101,15 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
 
-  config.action_mailer.smtp_settings = {
-    port: ENV['SPARKPOST_SMTP_PORT'],
-    address: ENV['SPARKPOST_SMTP_HOST'],
-    user_name: ENV['SPARKPOST_SMTP_USERNAME'],
-    password: ENV['SPARKPOST_SMTP_PASSWORD'],
-    authentication: :login,
-    enable_starttls_auto: true
-  }
+  # Don't need to use this because we send emails through Sparkpost APIs
+  # config.action_mailer.smtp_settings = {
+  #   port: 587,
+  #   address: "smtp.sparkpostmail.com",
+  #   user_name: "SMTP_Injection",
+  #   password: ENV['SPARKPOST_API_KEY'],
+  #   authentication: :login,
+  #   enable_starttls_auto: true
+  # }
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
