@@ -120,7 +120,7 @@ Blueprint has got a handy helper that you simply paste inside a form:
 * Create `.env` file and set your environment variables on your machine (see `.env-example`)
 
 ## Roadmap
-* ☑️ Use Bulma Sass files to easily change CSS settings
+* ✅ Use Bulma Sass files to easily change CSS settings
 * ☑️ Add some premade examples of dashboard/landing/biling pages
 * ☑️ Add support for Google/Facebook/Twitter auth (using [omniauth](https://github.com/omniauth/omniauth))
 * ☑️ Add logic to handle subscriptions using Stripe's webhooks
@@ -129,7 +129,6 @@ Blueprint has got a handy helper that you simply paste inside a form:
 * ☑️ Add basic Pricing page
 * ☑️ Create a command line based script to customize the installation (add/remove gems, create tables, etc)
 * ☑️ Add [friendly_id gem](https://github.com/norman/friendly_id)
-* ☑️ Add [Chartkick](https://chartkick.com/) and [groupdate](https://github.com/ankane/groupdate) gems for charts
 * ☑️ Add [SitemapGenerator](https://github.com/kjvarga/sitemap_generator) to... automatically generate a sitemap. 
 
 ## Contributions
