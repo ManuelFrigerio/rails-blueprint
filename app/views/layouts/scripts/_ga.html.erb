@@ -4,7 +4,14 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', '<%= analytics %>');
+
+    document.addEventListener('turbolinks:load', event => {
+    if (typeof gtag === 'function') {
+      gtag('config', '<%= analytics %>', {
+        'page_location': event.data.url
+      });
+    }
+  });
   </script>
 <% end %>
