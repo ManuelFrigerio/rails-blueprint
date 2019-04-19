@@ -121,15 +121,11 @@ Blueprint has got a handy helper that you simply paste inside a form:
 
 ## Roadmap
 * ✅ Use Bulma Sass files to easily change CSS settings
-* ☑️ Add some premade examples of dashboard/landing/biling pages
-* ☑️ Add support for Google/Facebook/Twitter auth (using [omniauth](https://github.com/omniauth/omniauth))
 * ☑️ Add logic to handle subscriptions using Stripe's webhooks
 * ☑️ Create configuration file for 1-click deployment on Heroku
 * ☑️ Basic admin dashboard which also allows to [sign in as another user](https://github.com/plataformatec/devise/wiki/How-To:-Sign-in-as-another-user-if-you-are-an-admin)
-* ☑️ Add basic Pricing page
 * ☑️ Add instructions to [use different theme](https://jenil.github.io/bulmaswatch/)
 * ☑️ Create a command line based script to customize the installation (add/remove gems, create tables, etc)
-* ☑️ Add [friendly_id gem](https://github.com/norman/friendly_id)
 * ☑️ Add [SitemapGenerator](https://github.com/kjvarga/sitemap_generator) to... automatically generate a sitemap. 
 
 ## Contributions
