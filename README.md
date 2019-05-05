@@ -15,6 +15,20 @@ This boilerplate was born from an internal document that you can find [here](htt
 
 Ideas/feedback/suggestions are welcome. Please open a PR to suggest a new feature.
 
+### Table of Contents
+- [Libraries](#libraries)
+- [Installation](#installation)
+- [Sending Emails](#sending-emails)
+  - [Organised Mail Folders](#organised-mailers-folders)
+- [Customize Bulma](#customize-bulma)
+- [Flash Messages](#flash-messages)
+  - [Trigger Flash Messages Manually](#trigger-flash-messages-manually)
+  - [Flash Messages Position](#flash-messages-position)
+- [Form Validation](#form-validation)
+- [Basic Admin Area](#basic-admin-area)
+- [Other Options](#other-options)
+- [Roadmap](#roadmap)
+
 ## Libraries
 Libraries included in this rails app:
 * User authentication via [Devise](https://github.com/plataformatec/devise)
@@ -82,7 +96,7 @@ showSuccess("This is a success notification");
 showError("This is a error notification");
 showWarning("This is a warning notification");
 ```
-### Flash notification position
+### Flash messages position
 You can change the default position by adding a second parameter "bottom" to the function, like this:
 ```
 showNotice("This is a notice notification", "bottom");
@@ -114,6 +128,11 @@ Blueprint has got a handy helper that you simply paste inside a form:
 
 ![form flash messages](https://quicknote-images.s3.amazonaws.com/images/1541594989782-%20valid.png)
 
+## Basic Admin Area
+A common functionality for Rails apps is the ability to log in as a specific user (usually to troubleshoot problems). Blueprint ships a very simple, yet flexible Admin Area that automatically lists all your users and allows you to log in as one of them with one click.
+
+To see this page, visit the `/admin` path of your app. You will be prompted to authenticate (you don't want to expose this info to the world). The default login credentials are `admin` and `password`. Clearly, they are not very hacker-proof. You can change them in the `admin/base_controller.rb` file, line 4. 
+
 ## Other options
 * If you are on Heroku, generate a master key by running this command `$ heroku config:set RAILS_MASTER_KEY=<your-master-key>` Make sure `your-master-key` is an alphanumeric string 32 chars.
 * Go to **devise.rb** and change the default email address `config.mailer_sender`
@@ -123,7 +142,7 @@ Blueprint has got a handy helper that you simply paste inside a form:
 * ✅ Use Bulma Sass files to easily change CSS settings
 * ☑️ Add logic to handle subscriptions using Stripe's webhooks
 * ☑️ Create configuration file for 1-click deployment on Heroku
-* ☑️ Basic admin dashboard which also allows to [sign in as another user](https://github.com/plataformatec/devise/wiki/How-To:-Sign-in-as-another-user-if-you-are-an-admin)
+* ✅ Basic admin dashboard which also allows to [sign in as another user](https://github.com/plataformatec/devise/wiki/How-To:-Sign-in-as-another-user-if-you-are-an-admin)
 * ☑️ Create a command line based script to customize the installation (add/remove gems, create tables, etc)
 * ☑️ Add [SitemapGenerator](https://github.com/kjvarga/sitemap_generator) to... automatically generate a sitemap. 
 
