@@ -16,12 +16,13 @@ Rails.application.routes.draw do
       :confirmations => "users/confirmations",
     }
 
-  # Sidekiq
-  Sidekiq::Web.use Rack::Auth::Basic do |username, password|
-  username == "admin" && password == "password"
-  end if Rails.env.production? || Rails.env.staging?
-  mount Sidekiq::Web, at: "/sidekiq"
 
-  root to: 'pages#home'
+  get "admin" => redirect("/admin/users"), as: :admin
+  namespace :admin do
+    resources :users, only: [:index, :show] do
+      get :become, on: :member
+    end
+    mount Sidekiq::Web, at: "/sidekiq"
+  end
 
 end
