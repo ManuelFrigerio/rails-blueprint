@@ -144,7 +144,6 @@ To see this page, visit the `/admin` path of your app. You will be prompted to a
 * ☑️ Create configuration file for 1-click deployment on Heroku
 * ✅ Basic admin dashboard which also allows to [sign in as another user](https://github.com/plataformatec/devise/wiki/How-To:-Sign-in-as-another-user-if-you-are-an-admin)
 * ☑️ Create a command line based script to customize the installation (add/remove gems, create tables, etc)
-* ☑️ Add [SitemapGenerator](https://github.com/kjvarga/sitemap_generator) to... automatically generate a sitemap. 
 
 ## Contributions
 
