@@ -17,7 +17,6 @@ gem 'turbolinks', '~> 5'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'sidetiq', github: "akhiln/sidetiq"
 gem 'sinatra', :require => nil # for sidekiq UI
 gem 'sidekiq-status'
 gem 'sidekiq'
