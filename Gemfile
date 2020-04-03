@@ -4,10 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.0'
 
 # FOUNDATION
-gem 'rails', '~> 5.2.3'
+gem 'rails', '6'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'coffee-rails', '~> 4.2'
+gem 'webpacker'
 
 # PERFORMANCE
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -20,14 +21,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'sinatra', :require => nil # for sidekiq UI
 gem 'sidekiq-status'
 gem 'sidekiq'
-gem 'redis-rails', '~> 5'
+gem 'redis-rails'
 gem 'redis-objects'
 gem 'redis-namespace'
 
 # TOOLS
 gem "sentry-raven"
 gem 'devise'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'sparkpost_rails'
 

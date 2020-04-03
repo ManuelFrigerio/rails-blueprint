@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://quicknote-images.s3.amazonaws.com/images/1540900611411-%20Untitled%2520design.png" height="150">
   <h2 align="center">Blueprint</h2>
-  <p align="center">A boilerplate to create Rails 5 apps in seconds.<p>
+  <p align="center">A boilerplate to create Rails 6 apps in minutes.<p>
   <p align="center">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="prs welcome">
@@ -10,8 +10,7 @@
 
 
 ## Overview
-Blueprint is a boilerplate to create Rails 5 apps easily and quickly.
-This boilerplate was born from an internal document that you can find [here](https://www.notion.so/maitre/Rails-5-App-Setup-Blueprint-d8b70c50d62f4bf5a4607ee7a7b994ac).
+Blueprint is a boilerplate to create Rails 6 apps easily and quickly.
 
 Ideas/feedback/suggestions are welcome. Please open a PR to suggest a new feature.
 
@@ -36,7 +35,6 @@ Libraries included in this rails app:
 * Script that handles flash messages
 * Easy CSS animations with [Animated.css](https://daneden.github.io/animate.css/)
 * Design via [Bulma](https://bulma.io/) + Sass
-* Rename your app in 1 command with [Rename](https://github.com/morshedalam/rename)
 * Troubleshoot problems faster with [Better Errors](https://github.com/BetterErrors/better_errors)
 * Production-ready DB setup via postgres
 * Google Analytics with Turbolinks support
@@ -47,7 +45,6 @@ Libraries included in this rails app:
 1. Clone the repo `git clone git@github.com:ManuelFrigerio/rails-blueprint.git`
 2. Go to the folder `cd rails-blueprint` and run `gem install bundle && bundle install`
 3. Run `rails db:setup && rails db:migrate` to create db and included Users table
-4. To rename the app run `rails g rename:into New-Name`
 
 ## Environment variables
 Blueprint uses a few environment variables to set defaults and save you time.
@@ -69,11 +66,11 @@ When you create a new mailer (e.g: OrderMailer), simply create the corresponding
 Check out the user_mailer folder as an example.
 
 ## Customize Bulma
-You can customize colours, sizes, breakpoints, etc by changing the variables in the `assets/stylesheets/bulma/utilities/initial-variable.scss` and `assets/stylesheets/bulma/utilities/derived-variable.scss` files. You cna learn more about [Bulma's Sass variables here](https://bulma.io/documentation/customize/variables/).
+You can customize colours, sizes, breakpoints, etc by changing the variables in the `assets/stylesheets/bulma/utilities/initial-variable.scss` and `assets/stylesheets/bulma/utilities/derived-variable.scss` files. You can learn more about [Bulma's Sass variables here](https://bulma.io/documentation/customize/variables/).
 
 ## Flash messages
 Blueprint ships with a built-in JavaScript utility to handle flash messages.
-Flash messages will appear as notifications at the top of the screen for 3,5 seconds.
+Flash messages will appear as notifications at the top of the screen for 3.5 seconds.
 
 ![flash message](http://g.recordit.co/EUkOJ7Vhun.gif)
 
@@ -139,9 +136,9 @@ To see this page, visit the `/admin` path of your app. You will be prompted to a
 * Create `.env` file and set your environment variables on your machine (see `.env-example`)
 
 ## Roadmap
+* ✅ Migrate to Rails 6
 * ✅ Use Bulma Sass files to easily change CSS settings
 * ☑️ Add logic to handle subscriptions using Stripe's webhooks
-* ☑️ Create configuration file for 1-click deployment on Heroku
 * ✅ Basic admin dashboard which also allows to [sign in as another user](https://github.com/plataformatec/devise/wiki/How-To:-Sign-in-as-another-user-if-you-are-an-admin)
 * ☑️ Create a command line based script to customize the installation (add/remove gems, create tables, etc)
 
