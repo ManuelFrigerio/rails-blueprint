@@ -8,6 +8,7 @@ gem 'rails', '6'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'coffee-rails', '~> 4.2'
+gem 'webpacker'
 
 # PERFORMANCE
 gem 'bootsnap', '>= 1.1.0', require: false
