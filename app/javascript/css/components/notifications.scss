@@ -1,0 +1,39 @@
+.notification {
+  @apply text-white text-sm rounded-md px-4 py-3 z-50 fixed;
+  right: 20px;
+  left: 20px;
+  top: 20px;
+
+  &.success {
+    @apply bg-green-500
+  }
+
+  &.error {
+    @apply bg-red-500
+  }
+
+  &.warning {
+    @apply bg-yellow-500
+  }
+
+  &.notice {
+    @apply bg-blue-500
+  }
+
+  &.bottom {
+    @apply top-auto mb-0;
+    bottom: 20px;
+  }
+}
+
+/*On tablet and desktops*/
+@media only screen and (min-width: 768px) {
+
+  .notification {
+    right: 25px;
+    left: 25px;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+}
