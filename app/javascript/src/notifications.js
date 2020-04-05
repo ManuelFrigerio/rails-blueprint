@@ -11,17 +11,17 @@ var notification = function(color, msg, pos) {
 };
 
 window.showSuccess = function(msg, pos = "") {
-  notification('is-success', msg, pos);
+  notification('success', msg, pos);
 };
 
 window.showError = function(msg, pos = "") {
-  notification('is-danger', msg, pos);
+  notification('error', msg, pos);
 };
 
 window.showWarning = function(msg, pos = "") {
-  notification('is-warning', msg, pos);
+  notification('warning', msg, pos);
 };
 
 window.showNotice = function(msg, pos = "") {
-  notification('is-info', msg, pos);
+  notification('notice', msg, pos);
 };
