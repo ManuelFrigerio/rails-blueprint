@@ -19,7 +19,7 @@ Ideas/feedback/suggestions are welcome. Please open a PR to suggest a new featur
 - [Installation](#installation)
 - [Sending Emails](#sending-emails)
   - [Organised Mail Folders](#organised-mailers-folders)
-- [Customize Tailwind](#customize-tailwind)
+- [Customize Tailwind](#customize-tailwindcss)
 - [Flash Messages](#flash-messages)
   - [Trigger Flash Messages Manually](#trigger-flash-messages-manually)
   - [Flash Messages Position](#flash-messages-position)
