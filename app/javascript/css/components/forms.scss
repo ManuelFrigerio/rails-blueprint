@@ -1,0 +1,11 @@
+.input {
+  @apply appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight
+}
+
+.input:focus {
+  @apply outline-none shadow-outline
+}
+
+label {
+  @apply block text-gray-700 text-sm font-bold mb-1
+}

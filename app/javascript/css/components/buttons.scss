@@ -1,0 +1,7 @@
+.btn {
+  @apply bg-green-500 rounded py-2 px-5 text-white
+}
+
+.btn:hover {
+  @apply bg-green-700 cursor-pointer
+}

@@ -1,15 +1,28 @@
 .notification {
-  z-index: 99999999999999999999;
-  position: fixed;
+  @apply text-white text-sm rounded-md text-center px-4 py-3 z-50 fixed;
   right: 20px;
   left: 20px;
   top: 20px;
-  text-align: center;
+
+  &.success {
+    @apply bg-green-500
+  }
+
+  &.error {
+    @apply bg-red-500
+  }
+
+  &.warning {
+    @apply bg-yellow-500
+  }
+
+  &.notice {
+    @apply bg-blue-500
+  }
 
   &.bottom {
-    top: auto;
+    @apply top-auto mb-0;
     bottom: 20px;
-    margin-bottom: 0;
   }
 }
 
