@@ -19,7 +19,7 @@ Ideas/feedback/suggestions are welcome. Please open a PR to suggest a new featur
 - [Installation](#installation)
 - [Sending Emails](#sending-emails)
   - [Organised Mail Folders](#organised-mailers-folders)
-- [Customize Bulma](#customize-bulma)
+- [Customize Tailwind](#customize-tailwind)
 - [Flash Messages](#flash-messages)
   - [Trigger Flash Messages Manually](#trigger-flash-messages-manually)
   - [Flash Messages Position](#flash-messages-position)
@@ -34,7 +34,7 @@ Libraries included in this rails app:
 * Login/Sign up pages already designed and easily customizable
 * Script that handles flash messages
 * Easy CSS animations with [Animated.css](https://daneden.github.io/animate.css/)
-* Design via [Bulma](https://bulma.io/) + Sass
+* Design via [TailwindCSS](https://tailwindcss.com/)
 * Troubleshoot problems faster with [Better Errors](https://github.com/BetterErrors/better_errors)
 * Production-ready DB setup via postgres
 * Google Analytics with Turbolinks support
@@ -65,8 +65,19 @@ When you create a new mailer (e.g: OrderMailer), simply create the corresponding
 
 Check out the user_mailer folder as an example.
 
-## Customize Bulma
-You can customize colours, sizes, breakpoints, etc by changing the variables in the `assets/stylesheets/bulma/utilities/initial-variable.scss` and `assets/stylesheets/bulma/utilities/derived-variable.scss` files. You can learn more about [Bulma's Sass variables here](https://bulma.io/documentation/customize/variables/).
+## Customize TailwindCSS
+Tailwind is a utility-first CSS framework to build custom designs. You can [learn TailwindCSS for free here](https://scrimba.com/g/gtailwind). When it makes sense to create re-usable components, the recommended approach is to add all the classes related to a component in a `.scss` file under `app/javascript/css/components`. Don't forget to also `@import` the file in the `app/javascript/css/application.scss` file.
+
+Blueprint comes with 4 component files: Animations, Notifications, Buttons and Forms.
+
+### Animations
+The animation.scss file ships the [Animate.css] library of CSS animations.
+
+### Notifications
+The notifications.scss file stores the CSS for the flash messages (check the [flash messages](#flash-messages) section below).
+
+### Buttons & Forms
+The buttons.scss and forms.scss files store very simple classes to style buttons and form inputs. These files are used primarily to show how to use Tailwind.
 
 ## Flash messages
 Blueprint ships with a built-in JavaScript utility to handle flash messages.
@@ -112,7 +123,7 @@ If any validations fail, the respective inputs will turn red as shown in the scr
 
 ![validation](https://quicknote-images.s3.amazonaws.com/images/1541591390886-%20campaign.png)
 
-This is done with the help of an initializer that overrides Rails's default behaviour and add a `.is-danger` class to the inputs that fail the validation. If you decide not to use Bulma, you can still customize the error class by changing line 4 of the **customize_errors.rb** initializer.
+This is done with the help of an initializer that overrides Rails's default behaviour and add a `.border-red-500` class to the inputs that fail the validation. You can customize the error class by changing line 4 of the **customize_errors.rb** initializer.
 
 You can also use flash messages to show validation errors.
 Blueprint has got a handy helper that you simply paste inside a form:
@@ -136,8 +147,8 @@ To see this page, visit the `/admin` path of your app. You will be prompted to a
 * Create `.env` file and set your environment variables on your machine (see `.env-example`)
 
 ## Roadmap
+* ✅ Migrated to TailwindCSS
 * ✅ Migrate to Rails 6
-* ✅ Use Bulma Sass files to easily change CSS settings
 * ☑️ Add logic to handle subscriptions using Stripe's webhooks
 * ✅ Basic admin dashboard which also allows to [sign in as another user](https://github.com/plataformatec/devise/wiki/How-To:-Sign-in-as-another-user-if-you-are-an-admin)
 * ☑️ Create a command line based script to customize the installation (add/remove gems, create tables, etc)
@@ -155,4 +166,4 @@ Flash messages
 
 Signup screen
 
-![signup](https://quicknote-images.s3.amazonaws.com/images/1540900091320-%20ReferralHero%2520%2520%2520Results%2520driven%2520referral%2520software%2520for%2520SaaS%2520companies%2520.png)
+![signup](https://quicknote-images.s3.amazonaws.com/images/1586105286680-%20Screenshot_2020-04-05%2520MyWebApp%2520-%2520My%2520description.png)
