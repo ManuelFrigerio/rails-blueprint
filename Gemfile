@@ -27,10 +27,8 @@ gem 'redis-namespace'
 
 # TOOLS
 gem "sentry-raven"
-gem 'devise'
 gem 'jbuilder'
 gem 'rack-cors', :require => 'rack/cors'
-gem 'sparkpost_rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
