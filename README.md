@@ -51,9 +51,9 @@ Blueprint uses a few environment variables to set defaults and save you time.
 You can see which environment variables you need in the `.env-example` file. In your development environment, rename the `.env-example` file to `.env` and restart the server.
 
 ## Sending emails
-To send emails Blueprint uses [SparkPost](https://sparkpost.com), an extremely realiable, developer-friendly and cheap ($9/month for 50K emails) email service. After you signup/login, get your API key here: https://app.sparkpost.com/account/api-keys.
+To send emails Blueprint uses [Postmark](https://postmarkapp.com), an extremely realiable, developer-friendly and cheap ($10/month for 10K emails) email service. After you signup/login, create your first server and get your API key.
 
-Simply make sure to set the `SPARKPOST_API_KEY` variable in your environment with your Sparkpost API key. You can also override other settings by changing the initializer (**config/initializers/sparkpost_rails.rb**) as [explained here](https://github.com/the-refinery/sparkpost_rails).
+Simply make sure to set the `POSTMARK_API_KEY` variable in your environment with your Postmark API key.
 
 ### Organised mailers folders
 By default, when you create a new mailer in Rails you have to create a folder under the `views` folder. However, if you have many mailers (eg: UserMailer, OrderMailer, NotificationMailer, etc), this often results in a messy `view` folder.
