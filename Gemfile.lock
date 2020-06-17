@@ -116,11 +116,12 @@ GEM
     ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    i18n (1.8.2)
+    i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
+    json (2.3.0)
     launchy (2.5.0)
       addressable (~> 2.7)
     letter_opener (1.7.0)
@@ -141,7 +142,7 @@ GEM
     mimemagic (0.3.4)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.14.0)
+    minitest (5.14.1)
     msgpack (1.3.3)
     multipart-post (2.1.1)
     mustermann (1.1.1)
@@ -152,6 +153,11 @@ GEM
     numerizer (0.1.1)
     orm_adapter (0.5.0)
     pg (1.2.3)
+    postmark (1.21.1)
+      json
+    postmark-rails (0.20.0)
+      actionmailer (>= 3.0.0)
+      postmark (~> 1.15)
     public_suffix (4.0.3)
     puma (3.12.4)
     rack (2.2.2)
@@ -254,8 +260,6 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.8.1)
       tilt (~> 2.0)
-    sparkpost_rails (1.5.2)
-      rails (>= 4.0, < 6.1)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -314,6 +318,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   memcachier
   pg (>= 0.18, < 2.0)
+  postmark-rails
   puma (~> 3.11)
   rack-cors
   rails (= 6)
@@ -327,7 +332,6 @@ DEPENDENCIES
   sidekiq
   sidekiq-status
   sinatra
-  sparkpost_rails
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
@@ -340,4 +344,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.17.1
+   1.17.2

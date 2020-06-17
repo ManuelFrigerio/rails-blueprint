@@ -96,20 +96,11 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
   config.action_mailer.default_url_options = { :host => ENV['APP_URL'] }
-  config.action_mailer.delivery_method = :sparkpost
+  config.action_mailer.delivery_method = :postmark
+  config.action_mailer.postmark_settings = { api_token: ENV['POSTMARK_API_KEY'] }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
-
-  # Don't need to use this because we send emails through Sparkpost APIs
-  # config.action_mailer.smtp_settings = {
-  #   port: 587,
-  #   address: "smtp.sparkpostmail.com",
-  #   user_name: "SMTP_Injection",
-  #   password: ENV['SPARKPOST_API_KEY'],
-  #   authentication: :login,
-  #   enable_starttls_auto: true
-  # }
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
