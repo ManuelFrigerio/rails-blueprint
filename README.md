@@ -15,7 +15,7 @@ Blueprint is a boilerplate to create Rails 6 apps easily and quickly.
 Ideas/feedback/suggestions are welcome. Please open a PR to suggest a new feature.
 
 ### Table of Contents
-- [Libraries](#libraries)
+- [Built-in features](#built-in-features)
 - [Installation](#installation)
 - [Sending Emails](#sending-emails)
   - [Organised Mail Folders](#organised-mailers-folders)
@@ -28,17 +28,18 @@ Ideas/feedback/suggestions are welcome. Please open a PR to suggest a new featur
 - [Other Options](#other-options)
 - [Roadmap](#roadmap)
 
-## Libraries
-Libraries included in this rails app:
+## Built-in features
+Blueprint's goal is to make creating a modern Rails app as simple and fast as possible, which is why it comes with a few popular gems/plugins/libraries already set up:
 * User authentication via [Devise](https://github.com/plataformatec/devise)
 * Login/Sign up pages already designed and easily customizable
 * Script that handles flash messages
+* Transactional emails sent via [Postmark](https://postmarkapp.com/)
 * Easy CSS animations with [Animated.css](https://daneden.github.io/animate.css/)
 * Design via [TailwindCSS](https://tailwindcss.com/)
 * Troubleshoot problems faster with [Better Errors](https://github.com/BetterErrors/better_errors)
 * Production-ready DB setup via postgres
 * Google Analytics with Turbolinks support
-* Preview emails in your browser (instead of sending them) with [LetterOpener](https://github.com/ryanb/letter_opener)
+* Preview emails in your browser (instead of sending them) in development with [LetterOpener](https://github.com/ryanb/letter_opener)
 * [DotEnv](https://github.com/bkeepers/dotenv) for environment variables support
 
 ## Installation
