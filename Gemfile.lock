@@ -274,6 +274,8 @@ GEM
       rubyzip (>= 1.2.2)
     sentry-raven (3.0.0)
       faraday (>= 1.0)
+    shoulda-matchers (4.4.1)
+      activesupport (>= 4.2.0)
     sidekiq (6.0.6)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
@@ -361,6 +363,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   sentry-raven
+  shoulda-matchers (~> 4.0)
   sidekiq
   sidekiq-status
   sinatra
