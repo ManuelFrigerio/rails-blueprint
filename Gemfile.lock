@@ -98,6 +98,10 @@ GEM
     connection_pool (2.2.2)
     crass (1.0.6)
     dalli (2.7.10)
+    database_cleaner (1.8.5)
+    database_cleaner-active_record (1.8.0)
+      activerecord
+      database_cleaner (~> 1.8.0)
     debug_inspector (0.0.3)
     devise (4.7.1)
       bcrypt (~> 3.0)
@@ -336,6 +340,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   dalli
+  database_cleaner-active_record
   devise
   dotenv-rails
   factory_bot_rails (~> 4.10.0)
