@@ -1,4 +1,4 @@
-<h2 class="text-gray-700 font-bold text-lg text-center">Resend confirmation instructions</h2>
+<h2 class="text-gray-700 font-bold text-lg text-center">Resend confirmation email</h2>
 
 <div class="my-8">
   <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
@@ -10,6 +10,6 @@
       <%= f.email_field :email, placeholder: "bruce@wayne-enterprises.com", autofocus: true, class: "input", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
     </div>
 
-    <%= f.submit "Resend confirmation instructions", class: "btn" %>
+    <%= f.submit "Resend email", class: "btn" %>
   <% end %>
 </div>
